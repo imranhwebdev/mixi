@@ -1,0 +1,86 @@
+.heading {
+    padding: 26px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background: rgba(68, 84, 178, 0.10);
+    box-shadow: 0px 4px 5.3px 0px rgba(25, 34, 86, 0.20);
+    backdrop-filter: blur(8px);
+    @include sm {
+        padding-top: 15px;
+    }
+    & .header__logo{
+        min-width: 357px;
+        @include lg{
+            min-width: 150px;
+        }
+        @include sm{
+            min-width: 150px;
+        }
+    }
+    @include mmd {
+        .navbar-toggler {
+            background: $primary;
+            padding: 6px;
+        }
+        .navbar-collapse {
+            background: $_141C24;
+            padding: 25px;
+            & .navbar-nav {
+                & a {
+                    border-bottom: 1px solid #f3f3f321;
+                    padding: 15px 0;
+                }
+            }
+        }
+        & .navbar-nav {
+            display: inherit;
+            & .boxed__btn {
+                margin-top: 15px;
+                display: inline-block;
+                @include mmd{
+                    padding: 15px 35px !important;
+                    margin-top: 20px;
+                }
+                @include sm{
+                    padding: 15px 25px !important;
+                    margin-top: 20px;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    & .navbar-brand{
+        max-width: 136px;
+    }
+}
+
+.navbar-nav {
+    & a {
+        display: block;
+        color: $_white;
+        opacity: 0.7;
+        @include font-16;
+        padding:16px 20px;
+        cursor: pointer;
+        &:hover,
+        &.active,
+        &:focus {
+            color: $primary !important;
+        }
+    }
+    & .boxed__btn{
+        margin-left: 15px;
+    }
+}
+
+.heading.fixed{
+    position: fixed;
+    background: rgba(68, 84, 178, 0.10);
+    box-shadow: 0px 4px 5.3px 0px rgba(25, 34, 86, 0.20);
+    backdrop-filter: blur(20px);
+    padding: 10px 0;
+    transition: all .3s ease-in-out;
+}
