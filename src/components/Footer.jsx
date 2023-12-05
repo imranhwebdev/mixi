@@ -1,7 +1,10 @@
 import { React } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { FaPaperPlane } from "react-icons/fa";
+import { FaTwitter, FaPaperPlane } from "react-icons/fa";
 import siteLogo from '../assets/img/Logo.svg';
+import sociallogo3 from "../assets/img/social-logo3.svg";
+import sociallogo4 from "../assets/img/social-logo4.svg";
+import sociallogo5 from "../assets/img/social-logo5.svg";
 // import twitterX from '../assets/img/twitter_x.svg';
 export default function Footer(){
     const footerLeftDesc = 'A dedicated and secure platform allowing you to automate your trading journey';
@@ -9,9 +12,9 @@ export default function Footer(){
     const currentYear = new Date().getFullYear();
     const Copyright = `© ${currentYear} Surge. All rights reserved.`;
 
-    const footerSocialItems = [
+    const SocialItems = [
         {
-            icon: <FaPaperPlane />,
+            icon: <FaTwitter />,
             url:'https://www.google.com'
         },
         {
@@ -19,15 +22,15 @@ export default function Footer(){
             url:'https://www.google.com'
         },
         {
-            icon: <FaPaperPlane />,
+            imageSrc: sociallogo3,
             url:'https://www.google.com'
         },
         {
-            icon: <FaPaperPlane />,
+            imageSrc: sociallogo4,
             url:'https://www.google.com'
         },
         {
-            icon: <FaPaperPlane />,
+            imageSrc: sociallogo5,
             url:'https://www.google.com'
         },
     ]
@@ -36,19 +39,19 @@ export default function Footer(){
             <Container>
                 <Row className='justify-content-center'>
                     <Col sm="8">
-                        <div className="footer_top_right text-center">
+                        <div className="footer__content__area text-center">
                             <a href="/" className='footer__logo'>
                                 <img src={siteLogo} alt="Footer Logo" />
                             </a>
                             <p>{footerLeftDesc}</p>
                             <h5>{footerSocialTitle}</h5>
                             <ul className='footer__socials'>
-                                {footerSocialItems.map((footerSocialItem, index)=>(
+                                {SocialItems.map((SocialItem, index)=>(
                                      <li key={index}> 
-                                        <a href={footerSocialItem.url}  target="_blank"> 
-                                             {footerSocialItem.icon ? (footerSocialItem.icon) 
+                                        <a href={SocialItem.url}  target="_blank"> 
+                                             {SocialItem.icon ? (SocialItem.icon) 
                                             : 
-                                             (<img src={footerSocialItem.imageSrc} alt="Social Media" />)} 
+                                             (<img src={SocialItem.imageSrc} alt="Social Media" />)} 
                                          </a>
                                      </li>
                                 ))}
