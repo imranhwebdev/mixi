@@ -1,5 +1,5 @@
 .heading {
-    padding: 26px 0;
+    padding: 16px 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -8,16 +8,17 @@
     background: rgba(68, 84, 178, 0.10);
     box-shadow: 0px 4px 5.3px 0px rgba(25, 34, 86, 0.20);
     backdrop-filter: blur(8px);
+    @include mmd {
+        background: rgba(68, 84, 178, 0.110);
+        backdrop-filter: blur(208px);
+    }
     @include sm {
         padding-top: 15px;
     }
     & .header__logo{
-        min-width: 357px;
-        @include lg{
-            min-width: 150px;
-        }
-        @include sm{
-            min-width: 150px;
+        max-width: 174px;
+        @include mmd{
+            max-width: 150px;
         }
     }
     @include mmd {
@@ -26,7 +27,6 @@
             padding: 6px;
         }
         .navbar-collapse {
-            background: $_141C24;
             padding: 25px;
             & .navbar-nav {
                 & a {
@@ -52,19 +52,17 @@
             }
         }
     }
-    & .navbar-brand{
-        max-width: 136px;
-    }
 }
 
 .navbar-nav {
     & a {
+        font-family: 'Krungthep', sans-serif;
         display: block;
         color: $_white;
-        opacity: 0.7;
         @include font-16;
-        padding:16px 20px;
+        padding:13px 16px;
         cursor: pointer;
+        text-transform: capitalize;
         &:hover,
         &.active,
         &:focus {
@@ -73,6 +71,16 @@
     }
     & .boxed__btn{
         margin-left: 15px;
+        min-width: 132px;
+        @include font-18;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mmd{
+            border-bottom: 1px solid #fff !important;
+            margin-left: 0;
+        }
     }
 }
 

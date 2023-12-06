@@ -35,7 +35,7 @@ export default function Banner(){
         <div className="banner">
             <Container>
                 <Row className='align-items-center'>
-                    <Col lg={6}>
+                    <Col lg={8}>
                         <div className="banner-content">
                         <figure className="banner__shap0">
                             {/* <img src={bannerShap0} alt="" /> */}
@@ -55,7 +55,7 @@ export default function Banner(){
                             </ul>
                         </div>
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={4}>
                         <figure>
                             <img src={HeroRightImg} alt="" />
                         </figure>

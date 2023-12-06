@@ -2,7 +2,6 @@
 
 .footer {
     padding: 88px 0;
-    @include font-14;
     & .footer_top_left {
         max-width: 372px;
         @include sm{
@@ -55,9 +54,6 @@
         border-top: 1px solid rgba(255, 255, 255, 0.2);
         margin-top: 70px;
         padding-top: 15px;
-        & .copy__right{
-            @include font-14;
-        }
         @include sm{
             margin-top: 40px;
             padding-top: 30px;

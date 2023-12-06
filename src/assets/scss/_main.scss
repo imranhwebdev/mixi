@@ -1,7 +1,7 @@
 /* Banner CSS */
 .banner {
-    padding-top: 225px;
-    padding-bottom: 260px;
+    padding-top: 242px;
+    padding-bottom: 242px;
     position: relative;
     z-index: 1;
     @include sm {
@@ -29,17 +29,16 @@
             }
         }
         & h1 {
-            @include font-120;
-            margin-bottom: 50px;
+            margin-bottom: 24px;
             line-height: 1.3;
             @include mmd{
                 line-height: 1.6;
             }
         }
         & p {
-            margin-bottom: 50px;
-            @include font-30;
-            opacity: 0.8;
+            margin-bottom: 40px;
+            @include font-28;
+            color: $_B2BEF2;
         }
         & .boxed__btn {
           margin-right: 20px;
@@ -54,6 +53,14 @@
         }
         @include lg{
             width: 95%;
+        }
+        & ul.social__media{
+            li{
+                display: inline-block;
+                a{
+                    display: block;
+                }
+            }
         }
     }
     & .banner-img{

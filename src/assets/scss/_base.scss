@@ -28,27 +28,23 @@ h6 {
 };
 
 h1{
-    @include font-120;
-    line-height: 1.4
+    @include font-140;
 }
 h2{
-    @include font-54;
+    @include font-88;
 }
 h3{
-    @include font-40;
+    @include font-35;
 }
 h4{
-    @include font-22;
-}
-h5{
-    @include font-20;
+    @include font-32;
 }
 p {
     margin: 0;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -123,7 +119,7 @@ input::-webkit-inner-spin-button {
         text-transform: capitalize;
     }
     & p{
-        @include font-25;
+        @include font-22;
         opacity: 0.78;
         font-weight: 400;
     }
