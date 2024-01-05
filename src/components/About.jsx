@@ -9,8 +9,8 @@ export default function About(){
     return(
         <div className="about__area">
             <Container>
-                <Row className='align-items-center'>
-                    <Col lg={6}>
+                <Row>
+                    <Col md={6}>
                         <div className="about-left">
                             <figure className="about__img">
                                 <img src={AboutLefttImg} alt="" />
@@ -18,7 +18,7 @@ export default function About(){
                             <h4>pepe? MIXI <span>shib? MIXI</span>doge? MIXI</h4>
                         </div>
                     </Col>
-                    <Col lg={6}>
+                    <Col md={6}>
                         <div className="about__right_content">
                             <h2>{title}</h2>
                             <p>{desc1}</p>

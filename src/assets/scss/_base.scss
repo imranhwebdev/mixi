@@ -31,7 +31,7 @@ h1{
     @include font-140;
 }
 h2{
-    @include font-88;
+    @include font-85;
 }
 h3{
     @include font-35;
@@ -122,5 +122,22 @@ input::-webkit-inner-spin-button {
         @include font-22;
         opacity: 0.78;
         font-weight: 400;
+    }
+}
+
+.social__media{
+    li{
+        display: inline-block;
+        a{
+            display: block;
+            & img{
+                max-width: 76px;
+                height: 73px;
+                object-fit: cover;
+            }
+            &:hover{
+                transform: translateY(-10px);
+            }
+        }
     }
 }

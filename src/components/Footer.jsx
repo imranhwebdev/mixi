@@ -2,6 +2,8 @@ import { React } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { FaTwitter, FaPaperPlane } from "react-icons/fa";
 import siteLogo from '../assets/img/Logo.svg';
+import sociallogo1 from "../assets/img/social-logo1.svg";
+import sociallogo2 from "../assets/img/social-logo2.svg";
 import sociallogo3 from "../assets/img/social-logo3.svg";
 import sociallogo4 from "../assets/img/social-logo4.svg";
 import sociallogo5 from "../assets/img/social-logo5.svg";
@@ -14,11 +16,11 @@ export default function Footer(){
 
     const SocialItems = [
         {
-            icon: <FaTwitter />,
+            imageSrc: sociallogo1,
             url:'https://www.google.com'
         },
         {
-            icon: <FaPaperPlane />,
+            imageSrc: sociallogo2,
             url:'https://www.google.com'
         },
         {
@@ -45,7 +47,7 @@ export default function Footer(){
                             </a>
                             <p>{footerLeftDesc}</p>
                             <h5>{footerSocialTitle}</h5>
-                            <ul className='footer__socials'>
+                            <ul className='social__media'>
                                 {SocialItems.map((SocialItem, index)=>(
                                      <li key={index}> 
                                         <a href={SocialItem.url}  target="_blank"> 

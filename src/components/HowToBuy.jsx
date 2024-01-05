@@ -47,7 +47,7 @@ export default function HowToBuy(){
 
                             {HowToBuyContentBoxs.map((HowToBuyContentBox, item)=>(
                                 <div className="howtobuy__single__box d-flex" key={item}>
-                                    <figure className="about__img">
+                                    <figure className="howtobuy__img">
                                         <img src={HowToBuyContentBox.img} alt="" />
                                     </figure>
                                     <div className="box__content">

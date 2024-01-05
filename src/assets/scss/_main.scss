@@ -1,7 +1,9 @@
-/* Banner CSS */
+/*===================================
+============ Banner CSS ============= 
+=====================================*/
 .banner {
     padding-top: 242px;
-    padding-bottom: 242px;
+    padding-bottom: 215px;
     position: relative;
     z-index: 1;
     @include sm {
@@ -13,107 +15,234 @@
     &-content {
         z-index: 9;
         position: relative;
-        & span {
-            position: relative;
-            z-index: 1;
-            &::before{
-                position: absolute;
-                content: "";
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 8px;
-                border-radius: 50px;
-                background: $primary;
-                z-index: -1;
-            }
-        }
         & h1 {
             margin-bottom: 24px;
             line-height: 1.3;
             @include mmd{
                 line-height: 1.6;
+                margin-bottom: 10px;
             }
         }
         & p {
             margin-bottom: 40px;
             @include font-28;
             color: $_B2BEF2;
-        }
-        & .boxed__btn {
-          margin-right: 20px;
-          margin-bottom: 20px;
-          min-width: 232px;
-          text-align: center;
-          @include sm{
-            margin-right: 15px;
-            margin-bottom: 15px;
-            min-width: 180px;
-          }
-        }
-        @include lg{
-            width: 95%;
-        }
-        & ul.social__media{
-            li{
-                display: inline-block;
-                a{
-                    display: block;
-                }
+            @include mmd{
+                margin-bottom: 30px;
             }
-        }
-    }
-    & .banner-img{
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-45%);
-        z-index: -1;
-        width: 50%;
-        @include mmd{
-            display: none;
-        }
-    }
-    & .responsive_img{
-        width: 90%;
-        margin-left: auto;
-    }
-    & figure.banner__shap0 {
-        position: absolute;
-        left: -40px;
-        top: 0px;
-        max-width: 67px;
-        z-index: -1;
-        @include sm{
-            left: -10px;
-            max-width: 50px;
         }
     }
     & figure.banner__shap1 {
         position: absolute;
-        left: 0;
-        bottom: 70px;
-        max-width: 314px;
-        z-index: -1;
+        left: 0px;
+        bottom: 0px;
+        max-width: 380px;
         @include sm{
-            left: 0;
-            max-width: 100px;
+            left: -10px;
+            max-width: 300px;
         }
     }
     & figure.banner__shap2 {
         position: absolute;
-        left: 50%;
-        bottom: -30px;
-        transform: translateX(150px);
-        max-width: 150px;
+        top: 50px;
+        left: 24px;
+        max-width: 120px;
+        animation: zoom-in-out 4s ease-in-out infinite;
         z-index: -1;
         @include sm{
-            left: auto;
-            right: 0;
-            bottom: -10px;
+            left: 10px;
+            top: 30px;
             max-width: 100px;
-            transform: translateX(0px);
+        }
+    }
+    & figure.banner__shap3 {
+        position: absolute;
+        right: 0;
+        top: 0px;
+        max-width: 500px;
+        z-index: -1;
+        @include sm{
+            right: 0;
+            max-width: 300px;
+        }
+    }
+    & figure.banner__shap4 {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 273px;
+        z-index: -1;
+        @include lg{
+            max-width: 200px;
+        }
+        @include mmd{
+            max-width: 200px;
         }
     }
 }
-/* Banner CSS */
+@keyframes zoom-in-out {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0; /* Zoom in */
+    }
+    100% {
+      opacity: 1; /* Zoom out */
+    }
+  }
+/*===================================
+============ Banner CSS ============= 
+=====================================*/
+
+
+
+/*===================================
+============ About CSS ============= 
+=====================================*/
+.about__area{
+    padding-bottom: 82px;
+    & .about__right_content{
+        & h2{
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        & p{
+            margin-bottom: 30px;
+            color: $_B2BEF2;
+            @include font-22;
+        }
+
+    }
+    figure.about__img {
+        position: relative;
+    }
+    figure.about__img img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        width: 110%;
+        @include sm{
+                right: auto;
+                left: 50%;
+                z-index: -1;
+                width: 100%;
+                max-width: 400px;
+                transform: translateX(-50%);
+            
+        }
+    }
+    .about-left h4 {
+        text-align: center;
+        span{            
+            display: block;
+        }
+    }
+    .about__right_content {
+        @include sm{
+            margin-top: 235px;
+        }
+    }
+}
+
+
+
+
+
+/*===================================
+============ How To Buy CSS ============= 
+=====================================*/
+.howtobuy__area{
+    position: relative;
+    z-index: 1;
+    padding-top: 70px;
+    &::before{
+        position: absolute;
+        content: "";
+        left: -20%;
+        top: 0;
+        width: 650.473px;
+        height: 650.473px;
+        border-radius: 650.473px;
+        background: linear-gradient(180deg, #6986E1 0%, rgba(93, 119, 200, 0.00) 100%);
+        z-index: -1;
+        @include lg{
+                width: 450.473px;
+                height: 450.473px;
+                border-radius: 450.473px;
+            
+        }
+        @include mmd{
+                width: 350.473px;
+                height: 350.473px;
+                border-radius: 350.473px;
+           
+        }
+        @include sm{
+            width: 200.473px;
+            height: 200.473px;
+            border-radius: 200.473px;
+        
+        }
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        right: -20%;
+        top: 0;
+        width: 650.473px;
+        height: 650.473px;
+        border-radius: 650.473px;
+        background: linear-gradient(180deg, #6986E1 0%, rgba(93, 119, 200, 0.00) 100%);
+        z-index: -1;
+        @include lg{
+                width: 450.473px;
+                height: 450.473px;
+                border-radius: 450.473px;
+            
+        }
+        @include mmd{
+                width: 350.473px;
+                height: 350.473px;
+                border-radius: 350.473px;
+        }  
+        @include sm{
+            width: 200.473px;
+            height: 200.473px;
+            border-radius: 200.473px;
+        
+        }
+
+    }
+    & .howtobuy__single__box {
+        border-radius: 16px;
+        border: 2px solid #ADB8EA;
+        background: linear-gradient(91deg, rgba(94, 121, 206, 0.20) 7.12%, rgba(65, 96, 187, 0.20) 91.58%);
+        box-shadow: 0px 4px 6.8px 0px #304B9A;
+        backdrop-filter: blur(12px);
+        margin-bottom: 24px;
+        padding: 22px 32px;
+        gap: 32px;
+        & .howtobuy__img {
+            background: rgba(87, 120, 207, 0.6);
+            filter: drop-shadow(0px 0px 8.7px rgba(63, 81, 166, 0.4));
+            width: 100%;
+            height: 149px;
+            max-width: 153px;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            border-radius: 10px;
+            & img {
+                width: auto;
+                max-width: 100px;
+            }
+        }
+    
+    }
+}
