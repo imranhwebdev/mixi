@@ -1,15 +1,12 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
-import { FaTwitter, FaPaperPlane,  } from "react-icons/fa";
 import HeroRightImg from "../assets/img/hero-right-img.png";
 import sociallogo1 from "../assets/img/social-logo1.svg";
 import sociallogo2 from "../assets/img/social-logo2.svg";
 import sociallogo3 from "../assets/img/social-logo3.svg";
 import sociallogo4 from "../assets/img/social-logo4.svg";
 import sociallogo5 from "../assets/img/social-logo5.svg";
-import heroshap1 from "../assets/img/hero-bottom-left-shap.png";
 import heroshap2 from "../assets/img/hero-top-left-star.png";
-import heroshap3 from "../assets/img/hero-right-top-shap.png";
 import heroshap4 from "../assets/img/hero-right-shap.png";
 export default function Banner(){
     const title = "$MIXI";
@@ -39,15 +36,8 @@ export default function Banner(){
 
     return(
         <div className="banner">
-            
-            <figure className="banner__shap1">
-                <img src={heroshap1} alt="" />
-            </figure> 
             <figure className="banner__shap2">
                 <img src={heroshap2} alt="" />
-            </figure> 
-            <figure className="banner__shap3">
-                <img src={heroshap3} alt="" />
             </figure> 
             <Container>
                 <Row className='align-items-center'>
