@@ -1,4 +1,5 @@
-import React from 'react';
+import {React, useEffect} from 'react';
+import AOS from 'aos';
 import { Col, Container, Row } from 'react-bootstrap';
 import SectionTitle from './SectionTitle';
 import phase1_img from '../assets/img/phase1-img.png';
@@ -6,7 +7,14 @@ import phase2_img from '../assets/img/phase2-img.png';
 import phase3_img from '../assets/img/phase3-img.png';
 import moonmapblimg from '../assets/img/moonmap__bottom_left_img.png';
 import quarcodeimg from '../assets/img/quar_code.png';
+import roadMapLeftStar from '../assets/img/download_left_star.png';
+import roadMapRightStar from '../assets/img/download_right_star.png';
 export default function MoonMap() {
+  useEffect(() => {
+      AOS.init({
+        duration: 1000, // Specify the default animation duration
+      });
+    }, []);
   const title = "about $mixi";
   const desc = "Missed the Doge? Shiba? Dogelon Mars? And others? Missed Pepe this year? Did you also miss copies of them that weren't all made just for the community? But you can still be strong part of the new community? Yes? Either way, Mixi, the magic cosmo cat, was born to connect all communities and open the gateway to unbelievable gains and takeover the meme space with secret formulas.";
 
@@ -32,7 +40,13 @@ export default function MoonMap() {
   ];
 
   return (
-    <div className="moonmap__area" id='roadmap'>
+    <div className="moonmap__area" id='roadmap' data-aos="fade-up">
+      <figure className='road_map_leftstar'>
+        <img src={roadMapLeftStar} alt="" />
+      </figure>
+      <figure className='road_map_rightstar'>
+        <img src={roadMapRightStar} alt="" />
+      </figure>
       <Container>
         <SectionTitle
           title='MOON MAP'

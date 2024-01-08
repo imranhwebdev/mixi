@@ -1,4 +1,5 @@
-import {React} from 'react'
+import {React, useEffect} from 'react';
+import AOS from 'aos';
 import { Col, Container, Row } from 'react-bootstrap';
 import howtobuyboximg1 from "../assets/img/wallet.png";
 import howtobuyboximg2 from "../assets/img/ethereum.png";
@@ -6,8 +7,12 @@ import howtobuyboximg3 from "../assets/img/uniswap.png";
 import howtobuyboximg4 from "../assets/img/switch_mixi.png";
 import howtobuyboximg5 from "../assets/img/vibe.png";
 export default function HowToBuy(){
+    useEffect(() => {
+        AOS.init({
+          duration: 1500, // Specify the default animation duration
+        });
+      }, []);
     const title = "HOW TO BUY";
-
     const HowToBuyContentBoxs = [
         {
             img : howtobuyboximg1,
@@ -46,7 +51,7 @@ export default function HowToBuy(){
   </svg>;
   
     return(
-        <div className="howtobuy__area" id='howtobuy'>
+        <div className="howtobuy__area" id='howtobuy' data-aos="fade-up">
             <Container>
                 <Row>
                     <Col>

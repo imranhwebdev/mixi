@@ -116,7 +116,7 @@ const Tokenomics = () => {
 
     useEffect(() => {
       AOS.init({
-        duration: 1000, // Specify the default animation duration
+        duration: 1500, // Specify the default animation duration
       });
     }, []);
 

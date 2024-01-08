@@ -23,7 +23,7 @@
     }
     @include mmd {
         .navbar-toggler {
-            background: $primary;
+            background: $_white;
             padding: 6px;
         }
         .navbar-collapse {
@@ -67,7 +67,7 @@
         &:hover,
         &.active,
         &:focus {
-            color: $primary !important;
+            color: $_DA569F !important;
         }
     }
     & .boxed__btn{

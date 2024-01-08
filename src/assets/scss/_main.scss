@@ -6,11 +6,15 @@
     padding-bottom: 120px;
     position: relative;
     z-index: 1;
+    @include xl {
+        padding-top: 190px;
+    }
+    @include lg {
+        padding-top: 170px;
+    }
     @include mmd {
         padding-top: 150px;
-    }
-    @include sm {
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
     &-content {
         z-index: 9;
@@ -29,6 +33,14 @@
             @include mmd{
                 margin-bottom: 30px;
             }
+        }
+        @include sm{
+            text-align: center;
+            padding: 0 30px
+        }
+        @include ssm{
+            text-align: center;
+            padding: 0 0px
         }
     }
     & figure.banner__shap2 {
@@ -68,14 +80,48 @@
         @include mmd{
             max-width: 200px;
         }
-    }
-    & .hero_rightImg{
         @include sm{
-            max-width: 400px;
-            margin-left: auto;
-            margin-top: -50px;
+            bottom: -120px;
+            top: auto;
         }
     }
+    & .hero_right_area{
+        position: relative;
+        z-index: 1;
+        & .hero_right_top_star{
+            position: absolute;
+            top: 30px;
+            left: 45%;
+            max-width: 85px;
+            animation: rotate 9s normal linear infinite;
+            @include lg{
+                left: 10%;
+            }
+            @include xl{
+                left: 10%;
+            }
+            @include mmd{
+                left: 10%;
+            }
+            @include sm{
+                left: 20%;
+                top: 70px;
+                max-width: 70px;
+            }
+        }
+        & .hero_rightImg{
+            padding-top: 140px;
+            max-width: 327px;
+            margin-left: auto;
+            @include sm{
+                max-width: 270px;
+                margin: 0 auto;
+                margin-top: -50px;
+                padding-top: 100px;
+            }
+        }
+    }
+    
 }
   
 /*===================================
@@ -114,15 +160,22 @@
         width: 110%;
         max-width: 760px;
         height: 551px;
+        @include lg{
+            width: 100%;
+            height: 500px;
+        }
+        @include mmd{
+            width: 100%;
+            height: 480px;
+        }
         @include sm{
-                right: auto;
-                left: 50%;
-                z-index: -1;
-                width: 100%;
-                max-width: 400px;
-                height: auto;
-                transform: translateX(-50%);
-            
+            right: auto;
+            left: 50%;
+            z-index: -1;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            transform: translateX(-50%);            
         }
     }
     .about-left h4 {
@@ -485,6 +538,8 @@
 *  ======================================== */
 
 .moonmap__area{
+    position: relative;
+    z-index: 1;
     padding-top: 65px;
     padding-bottom: 60px;
     @include mmd{
@@ -511,7 +566,7 @@
             z-index: 1;
             padding: 30px 31px;
             border-radius: 16px;
-            border: 2px solid #FFF;
+            border: 1.5px solid #FFF;
             background: linear-gradient(180deg, #37469D 0%, rgba(55, 70, 157, 0.49) 99.99%);
             height: 100%;
             padding-bottom: 105px;
@@ -609,6 +664,10 @@
             color: $_white;
             @include font-35;
             text-transform: uppercase;
+            &:hover{
+                background: $_white;
+                color: $_DA569F;
+            }
             @include lg{
                 font-size: 25px;
                 padding: 20px 25px;
@@ -638,5 +697,21 @@
                 height: auto;
             }
         }
+    }
+    & .road_map_leftstar{
+        position: absolute;
+        left: 30px;
+        bottom: 10%;
+        max-width: 53px;
+        z-index: -1;
+        animation: zoom-in-out 4s ease-in-out infinite;
+    }
+    & .road_map_rightstar{
+        position: absolute;
+        right: 50px;
+        top: 53%;
+        max-width: 53px;
+        z-index: -1;
+        animation: zoom-in-out 5s ease-in-out infinite;
     }
 }

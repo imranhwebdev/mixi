@@ -2,6 +2,7 @@ import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { FaTwitter, FaTelegramPlane } from "react-icons/fa";
 import HeroRightImg from "../assets/img/hero-right-img.png";
+import HeroRightTopImg from "../assets/img/hero-right-top-star.png";
 import sociallogo3 from "../assets/img/socialicon3.svg";
 import sociallogo4 from "../assets/img/socialicon4.svg";
 import sociallogo5 from "../assets/img/socialicon5.svg";
@@ -57,10 +58,15 @@ export default function Banner(){
                             </ul>
                         </div>
                     </Col>
-                    <Col lg={4} md="5">
-                        <figure className='hero_rightImg'>
-                            <img src={HeroRightImg} alt="" />
-                        </figure>
+                    <Col lg={4} md="5" className='text-end'>
+                       <div className="hero_right_area">
+                            <figure className='hero_right_top_star'>
+                                <img src={HeroRightTopImg} alt="" />
+                            </figure>
+                            <figure className='hero_rightImg'>
+                                <img src={HeroRightImg} alt="" />
+                            </figure>
+                       </div>
                     </Col>
                 </Row>   
             </Container>

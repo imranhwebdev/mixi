@@ -4,7 +4,8 @@ import { FaTwitter, FaTelegramPlane } from "react-icons/fa";
 import siteLogo from '../assets/img/Logo.svg';
 import sociallogo3 from "../assets/img/socialicon3.svg";
 import sociallogo4 from "../assets/img/socialicon4.svg";
-import sociallogo5 from "../assets/img/socialicon5.svg";
+import footerLeftStar from "../assets/img/footer-left-star.png";
+import footerRightStar from "../assets/img/footer-right-star.png";
 export default function Footer(){
     const footerLeftDesc = 'Everything is only as strong as the community!';
     const currentYear = new Date().getFullYear();
@@ -76,6 +77,12 @@ export default function Footer(){
                     </Col>
                 </Row>
             </Container>
+            <figure className='footer_left_star'>
+                <img src={footerLeftStar} alt="" />
+            </figure>
+            <figure className='footer_right_star'>
+                <img src={footerRightStar} alt="" />
+            </figure>
         </footer>
     )
 }
