@@ -1,26 +1,22 @@
 import { React } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { FaTwitter, FaPaperPlane } from "react-icons/fa";
+import { FaTwitter, FaTelegramPlane } from "react-icons/fa";
 import siteLogo from '../assets/img/Logo.svg';
-import sociallogo1 from "../assets/img/social-logo1.svg";
-import sociallogo2 from "../assets/img/social-logo2.svg";
-import sociallogo3 from "../assets/img/social-logo3.svg";
-import sociallogo4 from "../assets/img/social-logo4.svg";
-import sociallogo5 from "../assets/img/social-logo5.svg";
-// import twitterX from '../assets/img/twitter_x.svg';
+import sociallogo3 from "../assets/img/socialicon3.svg";
+import sociallogo4 from "../assets/img/socialicon4.svg";
+import sociallogo5 from "../assets/img/socialicon5.svg";
 export default function Footer(){
-    const footerLeftDesc = 'A dedicated and secure platform allowing you to automate your trading journey';
-    const footerSocialTitle = 'Stay Connected';
+    const footerLeftDesc = 'Everything is only as strong as the community!';
     const currentYear = new Date().getFullYear();
-    const Copyright = `© ${currentYear} Surge. All rights reserved.`;
+    const Copyright = `Copyright @ ${currentYear}  MIXI Coin. All rights reserved. Fun mixer started.`;
 
     const SocialItems = [
         {
-            imageSrc: sociallogo1,
+            icon: <FaTwitter />,
             url:'https://www.google.com'
         },
         {
-            imageSrc: sociallogo2,
+            icon: <FaTelegramPlane />,
             url:'https://www.google.com'
         },
         {
@@ -31,11 +27,7 @@ export default function Footer(){
             imageSrc: sociallogo4,
             url:'https://www.google.com'
         },
-        {
-            imageSrc: sociallogo5,
-            url:'https://www.google.com'
-        },
-    ]
+    ];
     return(
         <footer className="footer">
             <Container>
@@ -46,7 +38,6 @@ export default function Footer(){
                                 <img src={siteLogo} alt="Footer Logo" />
                             </a>
                             <p>{footerLeftDesc}</p>
-                            <h5>{footerSocialTitle}</h5>
                             <ul className='social__media'>
                                 {SocialItems.map((SocialItem, index)=>(
                                      <li key={index}> 

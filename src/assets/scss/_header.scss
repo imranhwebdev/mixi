@@ -43,6 +43,7 @@
                 @include mmd{
                     padding: 15px 35px !important;
                     margin-top: 20px;
+                    line-height: 1;
                 }
                 @include sm{
                     padding: 15px 25px !important;
@@ -62,7 +63,7 @@
         @include font-16;
         padding:13px 16px;
         cursor: pointer;
-        text-transform: capitalize;
+        text-transform: uppercase;
         &:hover,
         &.active,
         &:focus {

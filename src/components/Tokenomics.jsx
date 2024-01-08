@@ -2,6 +2,7 @@ import {React, useState, useEffect} from 'react';
 import AOS from 'aos';
 import ReactApexChart from "react-apexcharts";
 import { Col, Container, Row } from "react-bootstrap";
+import { FaClipboardCheck  } from "react-icons/fa";
 import SectionTitle from './SectionTitle';
 import tokenomics_donut_m_img from '../assets/img/donut_middle_content.png';
 import copyTxt from '../assets/img/copyTxt.png';
@@ -85,7 +86,7 @@ const Tokenomics = () => {
           },
     });
 
-    const [textToCopy, setTextToCopy] = useState('00x8F4E64d92ADc4');
+    const [textToCopy, setTextToCopy] = useState('0x15228A9EBEe76');
     const [isCopied, setIsCopied] = useState(false);
     const handleCopyToClipboard = () => {
         navigator.clipboard.writeText(textToCopy)
@@ -133,10 +134,20 @@ const Tokenomics = () => {
                                     <div className="tokenomics_copyTxt copytoclipboard">
                                        <span className='c_title'>Contract Address:</span> <input readOnly type="text"  value={textToCopy}
                                             onChange={(e) => setTextToCopy(e.target.value)}/>
-
-                                        <button onClick={handleCopyToClipboard}> {isCopied && <span className='coppied'> 
-                                            <span className='copyed'>Copyed</span> </span>} <img src={copyTxt}/>
+                                        <button onClick={handleCopyToClipboard}>
+                                          {!isCopied && (
+                                            <span>
+                                              <img src={copyTxt} alt="Copy Text" />
+                                            </span>
+                                          )}
+                                          {isCopied && (
+                                            <span className='copyed'>
+                                              <FaClipboardCheck  />
+                                            </span>
+                                          )}
                                         </button>
+
+
                                     </div>
                                 </li>
                             </ul>

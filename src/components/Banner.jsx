@@ -1,23 +1,22 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
+import { FaTwitter, FaTelegramPlane } from "react-icons/fa";
 import HeroRightImg from "../assets/img/hero-right-img.png";
-import sociallogo1 from "../assets/img/social-logo1.svg";
-import sociallogo2 from "../assets/img/social-logo2.svg";
-import sociallogo3 from "../assets/img/social-logo3.svg";
-import sociallogo4 from "../assets/img/social-logo4.svg";
-import sociallogo5 from "../assets/img/social-logo5.svg";
+import sociallogo3 from "../assets/img/socialicon3.svg";
+import sociallogo4 from "../assets/img/socialicon4.svg";
+import sociallogo5 from "../assets/img/socialicon5.svg";
 import heroshap2 from "../assets/img/hero-top-left-star.png";
 import heroshap4 from "../assets/img/hero-right-shap.png";
 export default function Banner(){
     const title = "$MIXI";
-    const desc = "Mixi all meme coins and their communities together and change the memeverse with the Mixi cosmo cat. Love it, build it.";
+    const desc = "Mixi all meme coins and their communities together and change the memeverse with the Mixi cosmo cat. Love it, build it";
     const SocialItems = [
         {
-            imageSrc: sociallogo1,
+            icon: <FaTwitter />,
             url:'https://www.google.com'
         },
         {
-            imageSrc: sociallogo2,
+            icon: <FaTelegramPlane />,
             url:'https://www.google.com'
         },
         {
@@ -59,7 +58,7 @@ export default function Banner(){
                         </div>
                     </Col>
                     <Col lg={4} md="5">
-                        <figure>
+                        <figure className='hero_rightImg'>
                             <img src={HeroRightImg} alt="" />
                         </figure>
                     </Col>
