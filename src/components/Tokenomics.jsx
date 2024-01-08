@@ -5,6 +5,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { FaClipboardCheck  } from "react-icons/fa";
 import SectionTitle from './SectionTitle';
 import tokenomics_donut_m_img from '../assets/img/donut_middle_content.png';
+import tokenomics_donut_m_bg from '../assets/img/donut-bg.png';
 import copyTxt from '../assets/img/copyTxt.png';
 const Tokenomics = () => {
     const donutCommentTxt = "LP tokens are burnt, and contract ownership is renounced. The team's tokens will locked until January 1, 2028";
@@ -122,9 +123,9 @@ const Tokenomics = () => {
     return(
         <div className="tokenomics" id='tokenomics' data-aos="fade-up">
             <Container>
+              <SectionTitle title={'TOKENOMICS'} />
                 <Row className='align-items-center'>
                     <Col lg={6}>
-                        <SectionTitle title={'TOKENOMICS'} />
                         <div className="tokenomics__left__list">
                             <ul>
                                 {tokenomicsLists.map((tokenomicsList, index)=>(
@@ -163,7 +164,7 @@ const Tokenomics = () => {
                                                 <li key={i} className="d-inline-block">
                                                     <div className="d-flex align-items-center">
                                                         <div className="dot" style={{backgroundColor: Area.options.colors[i]}}></div>
-                                                        <div><strong className="fw-bold">{el + '%'}</strong></div>
+                                                        <div className='percent'>{el + '%'}</div>
                                                         <div className="content">{Area.options.labels[i]}</div>
                                                     </div>
                                                 </li>
@@ -175,6 +176,9 @@ const Tokenomics = () => {
                             <div className="meme_coin_donut_chart">
                                 <figure className='donut_m_img'>
                                     <img src={tokenomics_donut_m_img} alt="donut middle img" />
+                                </figure>
+                                <figure className='donut_m_bg'>
+                                    <img src={tokenomics_donut_m_bg} alt="donut middle img" />
                                 </figure>
                                 <ReactApexChart options={Area.options} series={Area.series} type="donut" />
                             </div>
