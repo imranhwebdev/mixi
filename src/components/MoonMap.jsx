@@ -38,11 +38,11 @@ export default function MoonMap() {
           title='MOON MAP'
           des='Mixi is using Starship rocket and AI power on our joint space mission.'
         />
-        <Row>
+        <Row className='service_items'>
           {moonmapsingleitems.map((moonmapsingleitem, index) => (
-            <Col key={index} lg={4}>
+            <Col key={index} lg={4} md={6} className='mb-5'>
               <div className="moonapp_content">
-                <h2>{moonmapsingleitem.title}</h2>
+                <h3 className='mb-3'>{moonmapsingleitem.title}</h3>
                 <ul>
                   {moonmapsingleitem.list.map((item, listIndex) => (
                     <li key={listIndex}>{item}</li>
@@ -55,13 +55,13 @@ export default function MoonMap() {
             </Col>
           ))}
         </Row>
-        <Row>
-            <Col sm="8">
+        <Row className='quear_code_area'>
+            <Col md={8}>
                 <figure className='moonmap_bottom_left_img'>
                     <img src={moonmapblimg} alt="" />
                 </figure>
             </Col>
-            <Col sm="4">
+            <Col md={4} className='text-center'>
                 <div className="download__area">
                     <figure className='quarcode'>
                         <img src={quarcodeimg} alt="" />

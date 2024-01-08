@@ -28,6 +28,20 @@ export default function Footer(){
             url:'https://www.google.com'
         },
     ];
+    const footerBtns = [
+        {
+            btnTxt: "KYC",
+            url:'https://www.google.com'
+        },
+        {
+            btnTxt: "AUDIT",
+            url:'https://www.google.com'
+        },
+        {
+            btnTxt: "SAFU",
+            url:'https://www.google.com'
+        },
+    ];
     return(
         <footer className="footer">
             <Container>
@@ -49,7 +63,15 @@ export default function Footer(){
                                      </li>
                                 ))}
                             </ul>
+                            
+                            <div className="footer_socials d-flex flex-wrap gap-4 justify-content-center mb-4">
+                                    {footerBtns.map((footerBtn)=>(
+                                        <a href={footerBtn.url} className='boxed__btn'>{footerBtn.btnTxt}</a>
+                                    ))}
+                            </div>
+
                             <p className='copy__right'>{Copyright}</p>
+                            
                         </div>
                     </Col>
                 </Row>

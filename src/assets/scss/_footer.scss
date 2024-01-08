@@ -1,66 +1,33 @@
-/* Footer css */
-
 .footer {
-    padding: 88px 0;
-    & .footer_top_left {
-        max-width: 372px;
-        @include sm{
-           margin: 0 auto;
-        }
-        & img{
-            margin-bottom: 30px;
-        }
-        & p{
-            @include font-16;
-
-        }
-        & .footer__logo{
-            max-width: 181px;
-        }
-    }
-    & .footer_top_right{
-       & h5{
-            font-family: 'Satoshi-Medium';
-            margin-bottom: 20px;
-            font-weight: 400;
-            text-transform: capitalize;
-            line-height: 160%;
-        }
-        & ul{
-           & li{
-                display: inline-block;
-                @include transition;
-                & a{
-                    width: 35px;
-                    height: 35px;
-                    padding: 7px;
-                    color: $_white;
-                    margin-left: 10px;
-                    background: #07303D;
-                    border-radius: 5px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 17px;
-                }
-                &:hover a{
-                    transform: scaleX(-1);
-                    box-shadow: 1px 0px 10px 0px #15B887;
-                }
-            }
-        }
-    }
-    & .footer_bottom{
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        margin-top: 70px;
-        padding-top: 15px;
-        @include sm{
-            margin-top: 40px;
-            padding-top: 30px;
-        }
+    padding: 98px 0;
+    @include mmd{
+        padding: 70px 0;
     }
     @include sm{
+        padding: 50px 0;
+    }
+    @include ssm{
         padding: 30px 0;
+    }
+    & .footer__content__area {
+        & .footer__logo{
+            margin-bottom: 18px;
+            display: inline-block;
+           & img{
+                max-width: 174px;
+            }
+        }
+        
+        & p{
+            @include font-22;
+        }
+        & .social__media{
+            margin-top: 32px;
+            margin-bottom: 45px;
+            @include sm{
+                margin-bottom: 20px;
+            }
+        }
     }
 }
 
